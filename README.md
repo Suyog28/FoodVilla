@@ -15,3 +15,9 @@ No, they are different. The Shadow DOM is a browser technology designed primaril
 # What is “React Fiber”?
 
 Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM. 
+
+
+
+
+
+
