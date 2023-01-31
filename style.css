@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: azure;
-}
-
 .navbar {
   margin: 0 auto;
   display: flex;
@@ -85,12 +81,105 @@ body {
 }
 
 .search-btn {
-  padding: 1rem;
-  background-color: rgb(199, 135, 224);
-  width: 8%;
+  padding: 1.2rem;
+  background-color: darkorchid;
+  width: 10%;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 7px;
   color: white;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.cardListShimmer {
+  display: flex;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardShimmer {
+  width: calc((100% - 60px) / 4);
+  /* margin-right: 20px; */
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+.cardShimmer:nth-child(4n) {
+  margin-right: 0;
+}
+.cardShimmer.is-loading .image,
+.cardShimmer.is-loading h2,
+.cardShimmer.is-loading p {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s loading linear infinite;
+  margin: 5px;
+}
+.cardShimmer.is-loading .image {
+  height: 200px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cardShimmer.is-loading h2 {
+  height: 30px;
+}
+.cardShimmer.is-loading p {
+  height: 70px;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+._3Mn31 {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 12px;
+  justify-content: space-between;
+  color: #535665;
+  width: 100%;
+}
+
+._9uwBC {
+  height: 20px;
+  width: 43px;
+  padding: 0 5px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.wY0my {
+  background-color: #48c479;
+  color: #fff;
+}
+
+._537e4 {
+  font-size: 10px;
+  margin-right: 4px;
+  position: relative;
+  top: -1px;
+}
+
+[class*=" icon-"],
+[class^="icon-"] {
+  font-family: icomoon;
+  /* speak: none; */
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
