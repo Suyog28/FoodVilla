@@ -12,6 +12,12 @@
   background-color: darkorchid;
 }
 
+.body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .logo {
   width: 90px;
   height: 90px;
@@ -182,4 +188,13 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.loginBtn {
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #cb45e6;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }

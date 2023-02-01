@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 
 const Title = () => {
     return (
@@ -6,6 +8,7 @@ const Title = () => {
 }
 
 const HeaderComponants = () => {
+    const [logIn, setlogIn] = useState("false");
     return (
         <div className="navbar">
             <Title />
@@ -14,7 +17,17 @@ const HeaderComponants = () => {
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Cart</li>
+                <li> <div className="btnlogin">
+                    {
+                        logIn ? (<button className="loginBtn" onClick={() => setlogIn(false)} >Logout</button>) : (
+                            <button className="loginBtn" onClick={() => setlogIn(true)} >LogIn</button>
+                        )
+
+                    }
+
+                </div></li>
             </ul>
+
         </div>
     )
 }
