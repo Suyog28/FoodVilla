@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
-    const { id } = useParams();
+    const { id } = useParams();//Smart/Cool developer use this method
 
     // const { id } = param; distrucring 
 
